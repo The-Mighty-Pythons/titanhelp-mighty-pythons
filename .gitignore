@@ -1,0 +1,17 @@
+# Visual Studio
+.vs/
+
+# Python
+__pycache__/
+*.pyc
+.env
+.venv
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+dist-ssr
+
+# OS / editor noise
+.DS_Store
