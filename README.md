@@ -102,10 +102,10 @@ TitanHelp Architecture and Design Documentation
 
 <h2 id="run">How to Run Locally</h2>
 <p>
-from the project folder, commands should be 
+from \TitanHelpProject\titanhelp-mighty-pythons\backend\TitanHelp.Backend> 
 pip install -r requirements.txt
-python TitanHelp.Backend.py
-
+then in the solution explorer, right click on TitanHelp.Backend and select "Set as Startup Project".
+from there you should be able to run the project with F5 or the start button in Visual Studio. 
 </p>
 
 <h3>Quick Start</h3>
