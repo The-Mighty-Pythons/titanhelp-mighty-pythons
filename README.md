@@ -102,7 +102,10 @@ TitanHelp Architecture and Design Documentation
 
 <h2 id="run">How to Run Locally</h2>
 <p>
-To be Completed
+from the project folder, commands should be 
+pip install -r requirements.txt
+python TitanHelp.Backend.py
+
 </p>
 
 <h3>Quick Start</h3>
