@@ -82,6 +82,15 @@ This project uses <strong>Git Flow</strong> for version control.
   <li><strong>Priority</strong> – Low / Medium / High</li>
 </ul>
 
+<h3>API Contract</h3>
+<p>
+The frontend and backend communicate using a documented JSON contract.
+See:
+<a href="titanhelp-mighty-pythons/docs/api-contract.md">
+TitanHelp API Contract Specification
+</a>.
+</p>
+
 <h2 id="run">How to Run Locally</h2>
 <p>
 (To be completed)
