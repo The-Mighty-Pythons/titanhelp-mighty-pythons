@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fulls\\source\\repos\\TitanHelpProject\\titanhelp-mighty-pythons\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A0A6CA8-B290-451A-8016-20EE79580411}|backend\\TitanHelp.Backend\\TitanHelp.Backend.pyproj|C:\\Users\\fulls\\source\\repos\\TitanHelpProject\\titanhelp-mighty-pythons\\backend\\TitanHelp.Backend\\TitanHelp.Backend.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7A0A6CA8-B290-451A-8016-20EE79580411}|backend\\TitanHelp.Backend\\TitanHelp.Backend.pyproj|solutionrelative:backend\\TitanHelp.Backend\\TitanHelp.Backend.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 236,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TitanHelp.Backend.py",
+              "DocumentMoniker": "C:\\Users\\fulls\\source\\repos\\TitanHelpProject\\titanhelp-mighty-pythons\\backend\\TitanHelp.Backend\\TitanHelp.Backend.py",
+              "RelativeDocumentMoniker": "backend\\TitanHelp.Backend\\TitanHelp.Backend.py",
+              "ToolTip": "C:\\Users\\fulls\\source\\repos\\TitanHelpProject\\titanhelp-mighty-pythons\\backend\\TitanHelp.Backend\\TitanHelp.Backend.py",
+              "RelativeToolTip": "backend\\TitanHelp.Backend\\TitanHelp.Backend.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-02-01T15:23:33.53Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
