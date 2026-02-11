@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend (Flask): Debug",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/TitanHelp.Backend/TitanHelp.Backend.py",
+      "cwd": "${workspaceFolder}/backend/TitanHelp.Backend",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Frontend (Vite): Dev Server",
+      "type": "pwa-node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/frontend/vite-project",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack: Backend + Frontend",
+      "configurations": ["Backend (Flask): Debug", "Frontend (Vite): Dev Server"]
+    }
+  ]
+}

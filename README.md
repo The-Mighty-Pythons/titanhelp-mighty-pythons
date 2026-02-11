@@ -100,34 +100,69 @@ TitanHelp Architecture and Design Documentation
 </a>.
 </p>
 
-<h2 id="run">How to Run Locally</h2>
+<h2 id="run">How to Run Locally (VS Code + Scripts)</h2>
+
 <p>
-from \TitanHelpProject\titanhelp-mighty-pythons\backend\TitanHelp.Backend> 
-pip install -r requirements.txt
-then in the solution explorer, right click on TitanHelp.Backend and select "Set as Startup Project".
-from there you should be able to run the project with F5 or the start button in Visual Studio. 
+This project is designed to be run from the command line (or VS Code) using the included scripts.
+We do not support running the project from Visual Studio 2022.
 </p>
+
+<h3>Prerequisites (All Platforms)</h3>
+<ul>
+  <li><strong>Git</strong></li>
+  <li><strong>Python 3.11+</strong> (3.11 recommended)</li>
+  <li><strong>Node.js (LTS)</strong> + <strong>npm</strong></li>
+  <li><strong>VS Code</strong> (recommended)</li>
+</ul>
 
 <h3>Quick Start</h3>
 
-<h4>Windows (recommended)</h4>
+<h4>Windows</h4>
 <ol>
   <li>Clone the repo</li>
-  <li>From <code>titanhelp-mighty-pythons/</code> run:</li>
+  <li>Open a terminal in the repo folder: <code>titanhelp-mighty-pythons/</code></li>
+  <li>Run:</li>
 </ol>
 <pre><code>start-dev.bat</code></pre>
-<p>
-Frontend: <code>http://localhost:5173</code><br/>
-Backend API: <code>http://127.0.0.1:5000/api/tickets</code>
-Note: if you need to confirm the frontend ports
-open frontend/vite-project/package.json and look for "dev": "vite --port XXXX" in the scripts section.
-</p>
 
 <h4>Mac / Linux</h4>
 <ol>
   <li>Clone the repo</li>
-  <li>From <code>titanhelp-mighty-pythons/</code> run:</li>
+  <li>Open a terminal in the repo folder: <code>titanhelp-mighty-pythons/</code></li>
+  <li>Run:</li>
 </ol>
 <pre><code>chmod +x start-dev.sh
 ./start-dev.sh</code></pre>
 
+<h3>What You Should See</h3>
+<ul>
+  <li><strong>Backend API</strong> running at: <code>http://127.0.0.1:5000/api/tickets</code> (should return <code>[]</code>)</li>
+  <li><strong>Frontend</strong> running at the URL printed in the terminal (usually <code>http://localhost:5173</code>)</li>
+</ul>
+
+<h3>Notes / Troubleshooting</h3>
+<ul>
+  <li>
+    <strong>Vite port may change.</strong> If <code>5173</code> is already in use, Vite will automatically pick another port (e.g., <code>5174</code>).
+    Always use the exact Local URL shown in the terminal output.
+  </li>
+  <li>
+    <strong>First run takes longer.</strong> The scripts will create the Python virtual environment and install dependencies for backend and frontend.
+    Future runs should be faster.
+  </li>
+  <li>
+    <strong>If the backend fails to start</strong>, verify you can reach <code>http://127.0.0.1:5000/api/tickets</code> in a browser.
+    If it does not load, check the backend terminal for the error message.
+  </li>
+</ul>
+
+<h3>Optional: Run via VS Code</h3>
+<p>
+If you are using VS Code, you can also run the full stack from the Run panel:
+</p>
+<ol>
+  <li>Open folder: <code>titanhelp-mighty-pythons/</code></li>
+  <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View -> Run)</li>
+  <li>Select: <code>Full Stack: Backend + Frontend</code></li>
+  <li>Click the green play button</li>
+</ol>
