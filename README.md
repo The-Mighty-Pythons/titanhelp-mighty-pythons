@@ -91,6 +91,15 @@ TitanHelp API Contract Specification
 </a>.
 </p>
 
+<h3>Architecture</h3>
+<p>
+The application follows a layered architecture with clear separation of concerns. Documentation of the architecture and design decisions is provided in the project link below.
+See:
+<a href="titanhelp-mighty-pythons/docs/architecture.md">
+TitanHelp Architecture and Design Documentation
+</a>.
+</p>
+
 <h2 id="run">How to Run Locally</h2>
 <p>
 (To be completed)
