@@ -17,59 +17,77 @@
 </ol>
 
 <h2 id="requirements">Repository Requirements</h2>
-<h3>Development Tools</h3>
+
+<h3>Supported Development Environment</h3>
 <ul>
-  <li>
-    <strong>Visual Studio Community 2022</strong>
-    <ul>
-      <li>(Newer versions such as 2026 may work but have not been tested)</li>
-      <li>Required workloads:
-        <ul>
-          <li>Python Development</li>
-          <li>Node.js Development</li>
-          <li>ASP.NET and Web Development (for web tooling, browser debugging, and HTTP tools)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Visual Studio Code</strong> (if preferred for editing)</li>
+  <li><strong>VS Code</strong> (standard team IDE for this repository)</li>
+  <li>This repo is designed to run via <strong>VS Code</strong> and the included scripts. We do not support Visual Studio 2022 for running/debugging.</li>
 </ul>
-<h3>Required Software</h3>
+
+<h3>Required Software (All Platforms)</h3>
 <ul>
-  <li>Python 3.x (latest stable version)</li>
-  <li>Git</li>
-  <li>Node.js (LTS)</li>
-  <li>npm</li>
+  <li><strong>Git</strong></li>
+  <li><strong>Python 3.11+</strong> (3.11 recommended)</li>
+  <li><strong>Node.js (LTS)</strong> + <strong>npm</strong></li>
 </ul>
-<h3>Git Flow Setup</h3>
-<p>
-This project uses <strong>Git Flow</strong> for version control.
-</p>
-<ol>
-  <li>Create a folder on your machine to contain the project.</li>
-  <li>Open a terminal or command prompt in that folder.</li>
-  <li>Initialize Git Flow:
-    <pre><code>git flow init</code></pre>
-  </li>
-  <li>
-    When prompted:
-    <ul>
-      <li>Set <code>main</code> as <strong>master</strong></li>
-      <li>Set <code>dev</code> as <strong>development</strong></li>
-      <li>Accept all other default options</li>
-    </ul>
-  </li>
-</ol>
+
+<h3>Recommended VS Code Extensions</h3>
+<ul>
+  <li><code>ms-python.python</code> (Python)</li>
+  <li><code>ms-python.vscode-pylance</code> (Pylance)</li>
+  <li><code>dbaeumer.vscode-eslint</code> (ESLint)</li>
+</ul>
+
+<h3>Repository Setup Notes</h3>
+<ul>
+  <li>Backend dependencies are managed with <code>requirements.txt</code> and a local virtual environment (<code>.venv</code>).</li>
+  <li>Frontend dependencies are managed with <code>npm</code> under <code>frontend/vite-project</code>.</li>
+</ul>
 
 <h2 id="plan">Sprint Plan</h2>
-<p>
-(To be defined)
-</p>
+
+<h3>Sprint 1: Foundation (Setup + Contract + Skeleton)</h3>
+<ul>
+  <li><strong>Goal:</strong> The full stack runs locally for all team members and frontend/backend integrate using a documented API contract.</li>
+  <li><strong>Deliverables:</strong>
+    <ul>
+      <li>US-F1: Repo Setup &amp; Run Instructions completed (clear setup steps; scripts provided; <code>.env.example</code> files present)</li>
+      <li>US-F2: API Contract Agreement completed (documented endpoints, payloads, error formats)</li>
+      <li>US-F3: Dev CORS Configuration completed (frontend can call backend without CORS errors)</li>
+      <li>Backend skeleton in place (Controller → Service → Repository → ORM layering)</li>
+      <li>Frontend skeleton in place (Tickets page can load and display ticket list)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Sprint 2: Core Ticket Flow (Create + List)</h3>
+<ul>
+  <li><strong>Goal:</strong> Users can view tickets and create a new ticket from the UI using the real API.</li>
+  <li><strong>Deliverables:</strong>
+    <ul>
+      <li>Backend: implement <code>GET /api/tickets</code> and <code>POST /api/tickets</code> using Service + Repository + SQLAlchemy</li>
+      <li>Backend: validate inputs and return error JSON per contract</li>
+      <li>Frontend: implement <code>TicketList</code> table + loading/error states</li>
+      <li>Frontend: implement <code>TicketForm</code> with client-side validation + success/reset behavior</li>
+      <li>End-to-end: create ticket in UI → appears in list</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="backlog">Backlog</h2>
+
 <p>
-(To be defined)
+The active product backlog is managed in our GitHub Project Board.
+All user stories, tasks, sprint assignments, and status updates are tracked there.
 </p>
+
+<p>
+<strong>Project Board:</strong><br/>
+<a href="https://github.com/orgs/The-Mighty-Pythons/projects/1">
+The Mighty Pythons – TitanHelp Project Board
+</a>
+</p>
+
 
 <h2 id="data">Data Model</h2>
 <h3>Ticket</h3>
