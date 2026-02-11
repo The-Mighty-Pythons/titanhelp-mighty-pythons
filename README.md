@@ -102,5 +102,29 @@ TitanHelp Architecture and Design Documentation
 
 <h2 id="run">How to Run Locally</h2>
 <p>
-(To be completed)
+To be Completed
 </p>
+
+<h3>Quick Start</h3>
+
+<h4>Windows (recommended)</h4>
+<ol>
+  <li>Clone the repo</li>
+  <li>From <code>titanhelp-mighty-pythons/</code> run:</li>
+</ol>
+<pre><code>start-dev.bat</code></pre>
+<p>
+Frontend: <code>http://localhost:5173</code><br/>
+Backend API: <code>http://127.0.0.1:5000/api/tickets</code>
+Note: if you need to confirm the frontend ports
+open frontend/vite-project/package.json and look for "dev": "vite --port XXXX" in the scripts section.
+</p>
+
+<h4>Mac / Linux</h4>
+<ol>
+  <li>Clone the repo</li>
+  <li>From <code>titanhelp-mighty-pythons/</code> run:</li>
+</ol>
+<pre><code>chmod +x start-dev.sh
+./start-dev.sh</code></pre>
+
