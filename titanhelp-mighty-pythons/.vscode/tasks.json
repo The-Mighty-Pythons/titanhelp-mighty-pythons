@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup Backend (.venv + pip install)",
+      "type": "shell",
+      "options": { "cwd": "${workspaceFolder}/backend/TitanHelp.Backend" },
+      "windows": {
+        "command": "cmd.exe", 
+        "args": [
+          "/c",
+          "py -m venv .venv && .\\.venv\\Scripts\\python -m pip install --upgrade pip && .\\.venv\\Scripts\\pip install -r requirements.txt"
+        ]
+      },
+      "osx": {
+        "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt"
+      },
+      "linux": {
+        "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup Frontend (npm install)",
+      "type": "shell",
+      "options": { "cwd": "${workspaceFolder}/frontend/vite-project" },
+      "windows": {
+        "command": "cmd.exe",
+        "args": ["/c", "npm install"]
+      },
+      "osx": {
+        "command": "npm install"
+      },
+      "linux": {
+        "command": "npm install"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Frontend (Vite)",
+      "type": "shell",
+      "options": { "cwd": "${workspaceFolder}/frontend/vite-project" },
+      "command": "npm run dev",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Run Backend (Flask)",
+      "type": "shell",
+      "options": { "cwd": "${workspaceFolder}/backend/TitanHelp.Backend" },
+      "windows": {
+        "command": ".\\.venv\\Scripts\\python TitanHelp.Backend.py"
+      },
+      "osx": {
+        "command": "./.venv/bin/python TitanHelp.Backend.py"
+      },
+      "linux": {
+        "command": "./.venv/bin/python TitanHelp.Backend.py"
+      },
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Run Full Stack (Tasks)",
+      "dependsOn": ["Run Backend (Flask)", "Run Frontend (Vite)"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}
