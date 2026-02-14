@@ -1,4 +1,6 @@
-import { useState } from 'react'
+{/*import { useState } from 'react'
+import Home from "./pages/home.jsx";
+import Header from "./components/header.jsx";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,6 +10,8 @@ function App() {
 
   return (
     <>
+      <Header />
+      <Home />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -32,4 +36,23 @@ function App() {
   )
 }
 
-export default App
+export default App*/}
+
+import Header from "./components/header";
+import Home from "./pages/home";
+import "./App.css";
+
+function App() {
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  );
+}
+
+export default App;
+
+
+
+
