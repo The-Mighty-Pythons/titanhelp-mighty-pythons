@@ -134,7 +134,22 @@ We do not support running the project from Visual Studio 2022.
 </ul>
 
 <h3>Quick Start</h3>
+<p>For the best experience, use Visual Studio Code</p>
 
+<h3>Ideal Method: Run via VS Code</h3>
+<ol>
+  <li>Open VS Code</li>
+  <li>Select Open folder. Inside  TitanHelpProject, select <code>titanhelp-mighty-pythons/</code></li>
+  <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View -> Run)</li>
+  <li>Select: <code>Full Stack: Backend + Frontend</code></li>
+  <li>Click the green play button</li>
+</ol>
+<p>You should see a full list of tasks running in the call stack, and no errors in the terminal.</p>
+<p>From here, until automatic launch is configured, you will open a new browser window and enter 
+ <code>http://localhost:5173</code> for the frontend, and <code>http://127.0.0.1:5000/api/tickets</code> for the backend.</p>
+<p>Stop the project in VS Code when done.</p>
+
+<h3>Alternative Methods</h3>
 <h4>Windows</h4>
 <ol>
   <li>Clone the repo</li>
@@ -173,14 +188,3 @@ We do not support running the project from Visual Studio 2022.
     If it does not load, check the backend terminal for the error message.
   </li>
 </ul>
-
-<h3>Optional: Run via VS Code</h3>
-<p>
-If you are using VS Code, you can also run the full stack from the Run panel:
-</p>
-<ol>
-  <li>Open folder: <code>titanhelp-mighty-pythons/</code></li>
-  <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View -> Run)</li>
-  <li>Select: <code>Full Stack: Backend + Frontend</code></li>
-  <li>Click the green play button</li>
-</ol>
