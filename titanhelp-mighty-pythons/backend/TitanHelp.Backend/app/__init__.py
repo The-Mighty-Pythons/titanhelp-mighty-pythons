@@ -13,7 +13,8 @@ def create_app():
 
     db.init_app(app)
 
-    import app.models
+    # Ensure models are imported before creating tables
+    from . import models # noqa: F401
 
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
