@@ -5,11 +5,14 @@ from dotenv import load_dotenv
 from .config import DevConfig
 from .extensions import db
 
-def create_app():
+def create_app(test_config: dict | None = None):
     load_dotenv()
 
     app = Flask(__name__)
     app.config.from_object(DevConfig)
+
+    if test_config:
+        app.config.update(test_config)
 
     db.init_app(app)
 
@@ -20,8 +23,5 @@ def create_app():
 
     from .api.tickets_controller import tickets_bp
     app.register_blueprint(tickets_bp, url_prefix="/api")
-
-    with app.app_context():
-        db.create_all()
 
     return app
