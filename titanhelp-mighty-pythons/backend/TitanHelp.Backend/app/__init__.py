@@ -13,6 +13,8 @@ def create_app():
 
     db.init_app(app)
 
+    import app.models
+
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     from .api.tickets_controller import tickets_bp
