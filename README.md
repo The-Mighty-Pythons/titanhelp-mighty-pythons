@@ -149,6 +149,11 @@ We do not support running the project from Visual Studio 2022.
  <code>http://localhost:5173</code> for the frontend, and <code>http://127.0.0.1:5000/api/tickets</code> for the backend.</p>
 <p>Stop the project in VS Code when done.</p>
 
+<h3>Running Tests</h3>
+<p>For now you will manually run tests.</p>
+<p>Go to the backend directory with file explorer <code>\TitanHelpProject\titanhelp-mighty-pythons\backend\TitanHelp.Backend</code></p>
+<p>Open an new terminal session and run <code>python -m pytest -v</code></p>
+
 <h3>Alternative Methods</h3>
 <h4>Windows</h4>
 <ol>
