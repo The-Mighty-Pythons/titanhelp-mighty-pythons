@@ -2,17 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/titanhelp-mighty-pythons/.vs/titanhelp-mighty-pythons/CopilotIndices/17.14.1577.30250
-/titanhelp-mighty-pythons/frontend/vite-project/node_modules/.bin
-/titanhelp-mighty-pythons/frontend/vite-project/node_modules/.vite/deps
-/titanhelp-mighty-pythons/frontend/vite-project/node_modules
-/titanhelp-mighty-pythons/.vs/titanhelp-mighty-pythons/FileContentIndex/ed224be0-9d1d-416a-a77c-835823ee85af.vsidx
-/.vs
-/titanhelp-mighty-pythons/.vs/titanhelp-mighty-pythons/FileContentIndex
-/titanhelp-mighty-pythons/backend/TitanHelp.Backend/app/__pycache__
-/titanhelp-mighty-pythons/.vs/titanhelp-mighty-pythons/CopilotIndices/17.14.1584.41681
-/titanhelp-mighty-pythons/.vs/titanhelp-mighty-pythons/v17/.suo
-/titanhelp-mighty-pythons/.vs/titanhelp-mighty-pythons/v17/DocumentLayout.backup.json
-/titanhelp-mighty-pythons/.vs/titanhelp-mighty-pythons/v17/DocumentLayout.json
-titanhelp-mighty-pythons/backend/TitanHelp.Backend/app/api/__pycache__/__init__.cpython-311.pyc
-titanhelp-mighty-pythons/backend/TitanHelp.Backend/app/api/__pycache__/tickets_controller.cpython-311.pyc
+.vs/
+.vscode/
+**/__pychace__/
+*.py[cod]
