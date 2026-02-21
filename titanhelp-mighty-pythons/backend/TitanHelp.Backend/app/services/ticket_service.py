@@ -13,15 +13,19 @@ class TicketService:
         return [t.to_dict() for t in tickets]
 
     def create_ticket(self, *, name: str, problem_description: str, priority: str) -> dict:
-        # defaults + validation (minimal)
-        name = (name or "").strip()
-        problem_description = (problem_description or "").strip()
-        priority = (priority or "Medium").strip()
-
-        if not name:
+        # Validate required fields first
+        if name is None or not name.strip():
             raise ValueError("name is required")
-        if not problem_description:
+        
+        if problem_description is None or not problem_description.strip():
             raise ValueError("problem_description is required")
+        
+        # Normalize after validation
+        name = name.strip()
+        problem_description = problem_description.strip()
+
+        # Default + validate priority
+        priority = priority.strip() if priority else "Medium"
 
         try:
             priority_enum = TicketPriority(priority)
@@ -34,5 +38,6 @@ class TicketService:
             Priority=priority_enum,
             Status="Open",
         )
+
         saved = self.repo.add(ticket)
         return saved.to_dict()
