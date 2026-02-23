@@ -13,7 +13,6 @@ class Ticket(db.Model):
     __tablename__ = "tickets"
 
     ID = db.Column(db.Integer, primary_key=True)
-
     Name = db.Column(db.String(100), nullable=False)
 
     Date = db.Column(
@@ -35,20 +34,20 @@ class Ticket(db.Model):
         nullable=False
     )
 
-def to_dict(self):
-    # datetime objects are not JSON serializable, so we convert to ISO format string
-    iso = (
-        self.Date.replace(microsecond=0)
-        .isoformat()
-        .replace("+00:00", "Z")
-    )
+    def to_dict(self):
+        # datetime objects are not JSON serializable, so we convert to ISO format string
+        iso = (
+            self.Date.replace(microsecond=0)
+            .isoformat()
+            .replace("+00:00", "Z")
+        )
 
-    # json contract requires lowercase
-    return {
-        "id": self.ID,
-        "name": self.Name,
-        "date": iso,
-        "problem_description": self.Problem_Description,
-        "status": self.Status,
-        "priority": self.Priority.value,
-    }
+        # json contract requires lowercase
+        return {
+            "id": self.ID,
+            "name": self.Name,
+            "date": iso,
+            "problem_description": self.Problem_Description,
+            "status": self.Status,
+            "priority": self.Priority.value,
+        }
