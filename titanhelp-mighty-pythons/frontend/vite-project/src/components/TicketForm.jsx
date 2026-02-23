@@ -53,7 +53,7 @@ function TicketForm({ onCreated }) {
           <option>High</option>
         </select>
 
-        <button type="submit">Create</button>
+        <button type="submit">Create Ticket</button>
       </form>
 
       {error && (
