@@ -59,7 +59,7 @@ function TicketForm({ onCreated }) {
       {error && (
         <div className="error">
           {Object.entries(error).map(([key, value]) => (
-            <div key={key}>{value}</div>
+            <div key = {key} > {value}</div>
           ))}
         </div>
       )}
