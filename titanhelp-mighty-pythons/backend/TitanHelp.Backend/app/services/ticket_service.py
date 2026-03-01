@@ -39,5 +39,5 @@ class TicketService:
             Status="Open",
         )
 
-        saved = self.repo.add(ticket)
+        saved = self.repo.create_ticket(ticket)
         return saved.to_dict()
