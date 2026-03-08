@@ -40,9 +40,9 @@ const TicketsTable = ({ tickets = [] }) => {
                             <td>{ticket.status}</td>
                             <td>{ticket.priority}</td>
                             <td>
-                                {ticket.description.length > 50
-                                ? ticket.description.substring(0, 50) + "..."
-                                : ticket.description}
+                                {ticket.problem_description.length > 50
+                                ? ticket.problem_description.substring(0, 50) + "..."
+                                : ticket.problem_description}
                             </td>
                         </tr>
                     ))}
