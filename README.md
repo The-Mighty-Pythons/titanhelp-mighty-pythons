@@ -140,6 +140,11 @@ We do not support running the project from Visual Studio 2022.
 <ol>
   <li>Open VS Code</li>
   <li>Select Open folder. Inside  TitanHelpProject, select <code>titanhelp-mighty-pythons/</code></li>
+  <li>Open a new Terminal in VSCode</li>
+  <li>In VSCode use the ctrl+shift+p command (Cmd+Shift+P on macOS) to access the Command Palette</li>
+  <li>Select Tasks: Run Task</li>
+  <li>Select the Setup Everything (First Time) option</li>
+  <img src="docs/FirstTimeSetup.png" alt="VSCode Task Menu showing Setup Everything (First Time)" width="600" />
   <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View -> Run)</li>
   <li>Select: <code>Full Stack: Backend + Frontend</code></li>
   <li>Click the green play button</li>

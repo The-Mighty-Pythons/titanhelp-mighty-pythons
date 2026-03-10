@@ -1,69 +1,189 @@
-# TitanHelp — Ticket Management System
+<!-- README.md -->
+<div align="center">
+  <h1>TitanHelp</h1>
+  <p>
+    <em>TitanHelp Ticketing System</em><br />
+    <strong>By:</strong> Amanda Crotty, Sydney Gilchrist, Sophia Sipayboun
+  </p>
+</div>
 
-A full-stack help desk ticket system built with Flask (Python) and React (Vite).
+<h2 id="toc">Table of Contents</h2>
+<ol>
+  <li><a href="#requirements">Repository Requirements</a></li>
+  <li><a href="#plan">Sprint Plan</a></li>
+  <li><a href="#backlog">Backlog</a></li>
+  <li><a href="#data">Data Model</a></li>
+  <li><a href="#run">How to Run Locally</a></li>
+</ol>
 
-## First-Time Setup
+<h2 id="requirements">Repository Requirements</h2>
 
-Run this once after cloning the repo. It creates the Python virtual environment, installs all dependencies for both frontend and backend, and creates the local database.
+<h3>Supported Development Environment</h3>
+<ul>
+  <li><strong>VS Code</strong> (standard team IDE for this repository)</li>
+  <li>This repo is designed to run via <strong>VS Code</strong> and the included scripts. We do not support Visual Studio 2022 for running/debugging.</li>
+</ul>
 
-**In VSCode:** Open the Command Palette (`Ctrl+Shift+P`) → `Tasks: Run Task` → `Setup Everything (First Time)`
+<h3>Required Software (All Platforms)</h3>
+<ul>
+  <li><strong>Git</strong></li>
+  <li><strong>Python 3.11+</strong> (3.11 recommended)</li>
+  <li><strong>Node.js (LTS)</strong> + <strong>npm</strong></li>
+</ul>
 
-**Or manually in a terminal:**
+<h3>Recommended VS Code Extensions</h3>
+<ul>
+  <li><code>ms-python.python</code> (Python)</li>
+  <li><code>ms-python.vscode-pylance</code> (Pylance)</li>
+  <li><code>dbaeumer.vscode-eslint</code> (ESLint)</li>
+</ul>
 
-```bash
-# Backend — from backend/TitanHelp.Backend/
-py -m venv .venv
-.venv\Scripts\pip install -r requirements.txt
-.venv\Scripts\flask db upgrade
+<h3>Repository Setup Notes</h3>
+<ul>
+  <li>Backend dependencies are managed with <code>requirements.txt</code> and a local virtual environment (<code>.venv</code>).</li>
+  <li>Frontend dependencies are managed with <code>npm</code> under <code>frontend/vite-project</code>.</li>
+</ul>
 
-# Frontend — from frontend/vite-project/
-npm install
-```
+<h2 id="plan">Sprint Plan</h2>
 
-> `flask db upgrade` creates the local SQLite database file at `instance/titanhelp.db`.
-> You only need to run this again if a teammate commits a new migration to `migrations/versions/`.
+<h3>Sprint 1: Foundation (Setup + Contract + Skeleton)</h3>
+<ul>
+  <li><strong>Goal:</strong> The full stack runs locally for all team members and frontend/backend integrate using a documented API contract.</li>
+  <li><strong>Deliverables:</strong>
+    <ul>
+      <li>US-F1: Repo Setup &amp; Run Instructions completed (clear setup steps; scripts provided; <code>.env.example</code> files present)</li>
+      <li>US-F2: API Contract Agreement completed (documented endpoints, payloads, error formats)</li>
+      <li>US-F3: Dev CORS Configuration completed (frontend can call backend without CORS errors)</li>
+      <li>Backend skeleton in place (Controller → Service → Repository → ORM layering)</li>
+      <li>Frontend skeleton in place (Tickets page can load and display ticket list)</li>
+    </ul>
+  </li>
+</ul>
 
-## Running the App
+<h3>Sprint 2: Core Ticket Flow (Create + List)</h3>
+<ul>
+  <li><strong>Goal:</strong> Users can view tickets and create a new ticket from the UI using the real API.</li>
+  <li><strong>Deliverables:</strong>
+    <ul>
+      <li>Backend: implement <code>GET /api/tickets</code> and <code>POST /api/tickets</code> using Service + Repository + SQLAlchemy</li>
+      <li>Backend: validate inputs and return error JSON per contract</li>
+      <li>Frontend: implement <code>TicketList</code> table + loading/error states</li>
+      <li>Frontend: implement <code>TicketForm</code> with client-side validation + success/reset behavior</li>
+      <li>End-to-end: create ticket in UI → appears in list</li>
+    </ul>
+  </li>
+</ul>
 
-**In VSCode:** Press `F5` and select `Full Stack: Backend + Frontend` to start both servers.
+<h2 id="backlog">Backlog</h2>
 
-| Server   | URL                    |
-|----------|------------------------|
-| Backend  | http://127.0.0.1:5000  |
-| Frontend | http://localhost:5173  |
+<p>
+The active product backlog is managed in our GitHub Project Board.
+All user stories, tasks, sprint assignments, and status updates are tracked there.
+</p>
 
-**Or via Tasks:** `Ctrl+Shift+P` → `Tasks: Run Task` → `Run Full Stack (Tasks)`
+<p>
+<strong>Project Board:</strong><br/>
+<a href="https://github.com/orgs/The-Mighty-Pythons/projects/1">
+The Mighty Pythons – TitanHelp Project Board
+</a>
+</p>
 
-## Running Tests
+<h2 id="data">Data Model</h2>
+<h3>Ticket</h3>
+<ul>
+  <li><strong>ID</strong> – Auto-generated</li>
+  <li><strong>Name</strong> – Required, maximum 100 characters</li>
+  <li><strong>Date</strong> – Auto-populated with ticket creation date</li>
+  <li><strong>Problem Description</strong> – Required, maximum 1000 characters</li>
+  <li><strong>Status</strong> – Default value: <em>Open</em></li>
+  <li><strong>Priority</strong> – Low / Medium / High</li>
+</ul>
 
-```bash
-# From backend/TitanHelp.Backend/
-.venv\Scripts\python -m pytest -v
-```
+<h3>API Contract</h3>
+<p>
+The frontend and backend communicate using a documented JSON contract.
+See:
+<a href="docs/api-contract.md">
+TitanHelp API Contract Specification
+</a>.
+</p>
 
-## Project Structure
+<h3>Architecture</h3>
+<p>
+The application follows a layered architecture with clear separation of concerns. Documentation of the architecture and design decisions is provided in the project link below.
+See:
+<a href="docs/architecture.md">
+TitanHelp Architecture and Design Documentation
+</a>.
+</p>
 
-```
-titanhelp-mighty-pythons/
-├── backend/TitanHelp.Backend/
-│   ├── app/
-│   │   ├── api/            # HTTP route handlers (controllers)
-│   │   ├── services/       # Business logic
-│   │   ├── repositories/   # Database access (SQLAlchemy)
-│   │   ├── models/         # ORM models (database schema)
-│   │   └── schemas/        # Input validation
-│   ├── migrations/         # Database version history (Flask-Migrate)
-│   ├── requirements.txt    # Python dependencies
-│   └── TitanHelp.Backend.py
-└── frontend/vite-project/
-    └── src/                # React components
-```
+<h2 id="run">How to Run Locally (VS Code + Scripts)</h2>
 
-## When a Teammate Adds a New Migration
+<p>
+This project is designed to be run from the command line (or VS Code) using the included scripts.
+We do not support running the project from Visual Studio 2022.
+</p>
 
-If someone on the team changes the database schema and commits a new file under `migrations/versions/`, you need to apply it:
+<h3>Prerequisites (All Platforms)</h3>
+<ul>
+  <li><strong>Git</strong></li>
+  <li><strong>Python 3.11+</strong> (3.11 recommended)</li>
+  <li><strong>Node.js (LTS)</strong> + <strong>npm</strong></li>
+  <li><strong>VS Code</strong> (recommended)</li>
+</ul>
 
-```bash
-# From backend/TitanHelp.Backend/
-.venv\Scripts\flask db upgrade
-```
+<h3>Quick Start</h3>
+<p>For the best experience, use Visual Studio Code</p>
+
+<h3>Ideal Method: Run via VS Code</h3>
+<ol>
+  <li>Open VS Code</li>
+  <li>Select Open folder and open <code>titanhelp-mighty-pythons/</code></li>
+  <li>Open a new Terminal in VSCode</li>
+  <li>In VSCode use the <code>Ctrl+Shift+P</code> command (<code>Cmd+Shift+P</code> on macOS) to access the Command Palette</li>
+  <li>Select <strong>Tasks: Run Task</strong></li>
+  <li>Select the <strong>Setup Everything (First Time)</strong> option</li>
+  <img src="docs/FirstTimeSetup.png" alt="VSCode Task Menu showing Setup Everything (First Time)" width="600" />
+  <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View → Run)</li>
+  <li>Select: <code>Full Stack: Backend + Frontend</code></li>
+  <li>Click the green play button</li>
+</ol>
+<p>You should see a full list of tasks running in the call stack, and no errors in the terminal.</p>
+<p>From here, until automatic launch is configured, you will open a new browser window and enter
+ <code>http://localhost:5173</code> for the frontend, and <code>http://127.0.0.1:5000/api/tickets</code> for the backend.</p>
+<p>Stop the project in VS Code when done.</p>
+
+<h3>Running Tests</h3>
+<p>For now you will manually run tests.</p>
+<p>Go to the backend directory with file explorer <code>\titanhelp-mighty-pythons\backend\TitanHelp.Backend</code></p>
+<p>Open a new terminal session and run <code>python -m pytest -v</code></p>
+
+<h3>Database Location</h3>
+<p>For local development, the SQLite database file is stored at:</p>
+<p><code>backend/TitanHelp.Backend/instance/titanhelp.db</code></p>
+<p>Database schema setup and updates are handled with Flask-Migrate using:</p>
+<p><code>flask db init</code></p>
+<p><code>flask db migrate</code></p>
+<p><code>flask db upgrade</code></p>
+
+<h3>What You Should See</h3>
+<ul>
+  <li><strong>Backend API</strong> running at: <code>http://127.0.0.1:5000/api/tickets</code> (should return <code>[]</code>)</li>
+  <li><strong>Frontend</strong> running at the URL printed in the terminal (usually <code>http://localhost:5173</code>)</li>
+</ul>
+
+<h3>Notes / Troubleshooting</h3>
+<ul>
+  <li>
+    <strong>Vite port may change.</strong> If <code>5173</code> is already in use, Vite will automatically pick another port (e.g., <code>5174</code>).
+    Always use the exact Local URL shown in the terminal output.
+  </li>
+  <li>
+    <strong>First run takes longer.</strong> The scripts will create the Python virtual environment and install dependencies for backend and frontend.
+    Future runs should be faster.
+  </li>
+  <li>
+    <strong>If the backend fails to start</strong>, verify you can reach <code>http://127.0.0.1:5000/api/tickets</code> in a browser.
+    If it does not load, check the backend terminal for the error message.
+  </li>
+</ul>
