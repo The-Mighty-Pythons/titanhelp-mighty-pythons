@@ -5,6 +5,7 @@
       "name": "Backend (Flask): Debug",
       "type": "python",
       "request": "launch",
+      "python": "${workspaceFolder}/backend/TitanHelp.Backend/.venv/Scripts/python.exe",
       "program": "${workspaceFolder}/backend/TitanHelp.Backend/TitanHelp.Backend.py",
       "cwd": "${workspaceFolder}/backend/TitanHelp.Backend",
       "console": "integratedTerminal",
