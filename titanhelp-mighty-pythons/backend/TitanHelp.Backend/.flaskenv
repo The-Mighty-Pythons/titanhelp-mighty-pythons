@@ -1,1 +1,1 @@
-FLASK_APP=TitanHelp.Backend.py
+FLASK_APP=app
