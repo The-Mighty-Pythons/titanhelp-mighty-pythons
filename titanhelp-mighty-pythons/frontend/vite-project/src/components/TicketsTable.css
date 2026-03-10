@@ -1,0 +1,30 @@
+.tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tickets-table th,
+.tickets-table td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.tickets-table th {
+    background-color: #000;
+}
+
+.tickets-table tr:nth-child(odd) {
+    background-color: #2e2e2e;
+}
+
+.tickets-table tr:nth-child(even) {
+    background-color: #444444;
+}
+
+.pagination button {
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    color: #ddd;
+}
