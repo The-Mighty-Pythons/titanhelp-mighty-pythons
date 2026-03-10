@@ -154,6 +154,14 @@ We do not support running the project from Visual Studio 2022.
 <p>Go to the backend directory with file explorer <code>\TitanHelpProject\titanhelp-mighty-pythons\backend\TitanHelp.Backend</code></p>
 <p>Open an new terminal session and run <code>python -m pytest -v</code></p>
 
+<h3>Database Location</h3>
+<p>For local development, the SQLite database file is stored at:</p>
+<p><code>backend/TitanHelp.Backend/instance/titanhelp.db</code></p>
+<p>Database schema setup and updates are handled with Flask-Migrate using:</p>
+<p><code>flask db init</code></p>
+<p><code>flask db migrate</code></p>
+<p><code>flask db upgrade</code></p>
+
 <h3>Alternative Methods</h3>
 <h4>Windows</h4>
 <ol>
