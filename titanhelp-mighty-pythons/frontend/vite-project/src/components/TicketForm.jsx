@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createTicket } from "../api/ticketApi";
-import './TicketForm.css';
+
 
 function TicketForm({ onCreated }) {
   const [form, setForm] = useState({
