@@ -6,17 +6,17 @@
       "type": "shell",
       "options": { "cwd": "${workspaceFolder}/backend/TitanHelp.Backend" },
       "windows": {
-        "command": "cmd.exe", 
+        "command": "cmd.exe",
         "args": [
           "/c",
-          "py -m venv .venv && .\\.venv\\Scripts\\python -m pip install --upgrade pip && .\\.venv\\Scripts\\pip install -r requirements.txt"
+          "py -m venv .venv && .\\.venv\\Scripts\\python -m pip install --upgrade pip && .\\.venv\\Scripts\\pip install -r requirements.txt && .\\.venv\\Scripts\\flask db upgrade"
         ]
       },
       "osx": {
-        "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt"
+        "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt && ./.venv/bin/flask db upgrade"
       },
       "linux": {
-        "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt"
+        "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install --upgrade pip && ./.venv/bin/pip install -r requirements.txt && ./.venv/bin/flask db upgrade"
       },
       "problemMatcher": []
     },
@@ -34,6 +34,12 @@
       "linux": {
         "command": "npm install"
       },
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup Everything (First Time)",
+      "dependsOn": ["Setup Backend (.venv + pip install)", "Setup Frontend (npm install)"],
+      "dependsOrder": "parallel",
       "problemMatcher": []
     },
     {
