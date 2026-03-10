@@ -3,7 +3,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 
 from .config import DevConfig
-from .extensions import db
+from .extensions import db, migrate
 
 def create_app(test_config: dict | None = None):
     load_dotenv()
@@ -15,6 +15,7 @@ def create_app(test_config: dict | None = None):
         app.config.update(test_config)
 
     db.init_app(app)
+    migrate.init_app(app, db)
 
     # Ensure models are imported before creating tables
     from . import models # noqa: F401
