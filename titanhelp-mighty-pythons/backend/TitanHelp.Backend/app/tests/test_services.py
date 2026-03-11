@@ -6,3 +6,29 @@ def test_get_all_tickets_empty(app):
     service = TicketService()
     result = service.get_all_tickets()
     assert result == []
+
+def test_create_ticket_returns_dict(app):
+    service = TicketService()
+    result = service.create_ticket(
+        name="Service Test",
+        problem_description="Created via service.",
+        priority="Medium"
+    )
+    assert isinstance(result, dict)
+    assert result["name"] == "Service Test"
+    assert result["status"] == "Open"
+    assert result["priority"] == "Medium"
+    assert "id" in result
+    assert "date" in result
+
+
+def test_create_ticket_appears_in_get_all(app):
+    service = TicketService()
+    service.create_ticket(
+        name="List Me",
+        problem_description="Should appear in get_all.",
+        priority="Low"
+    )
+    tickets = service.get_all_tickets()
+    assert len(tickets) == 1
+    assert tickets[0]["name"] == "List Me"
