@@ -44,3 +44,62 @@ def test_post_ticket_appears_in_list(client):
     response = client.get("/api/tickets")
     data = response.get_json()
     assert any(t["name"] == "Appears In List" for t in data)
+
+def test_post_ticket_missing_name_returns_400(client):
+    payload = {
+        "problem_description": "No name provided.",
+        "priority": "Low"
+    }
+    response = client.post(
+        "/api/tickets",
+        data=json.dumps(payload),
+        content_type="application/json"
+    )
+    assert response.status_code == 400
+    data = response.get_json()
+    assert "errors" in data
+    assert "name" in data["errors"]
+
+
+def test_post_ticket_missing_description_returns_400(client):
+    payload = {
+        "name": "No Description",
+        "priority": "Medium"
+    }
+    response = client.post(
+        "/api/tickets",
+        data=json.dumps(payload),
+        content_type="application/json"
+    )
+    assert response.status_code == 400
+    data = response.get_json()
+    assert "errors" in data
+    assert "problem_description" in data["errors"]
+
+
+def test_post_ticket_invalid_priority_returns_400(client):
+    payload = {
+        "name": "Bad Priority",
+        "problem_description": "This priority is invalid.",
+        "priority": "Urgent"
+    }
+    response = client.post(
+        "/api/tickets",
+        data=json.dumps(payload),
+        content_type="application/json"
+    )
+    assert response.status_code == 400
+    data = response.get_json()
+    assert "errors" in data
+    assert "priority" in data["errors"]
+
+
+def test_post_ticket_empty_body_returns_400(client):
+    response = client.post(
+        "/api/tickets",
+        data="{}",
+        content_type="application/json"
+    )
+    assert response.status_code == 400
+    data = response.get_json()
+    assert "errors" in data
