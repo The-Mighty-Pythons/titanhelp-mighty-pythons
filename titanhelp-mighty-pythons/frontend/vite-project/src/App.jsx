@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTickets } from "./api/ticketApi";
+import { getTickets, updateTicketStatus } from "./api/ticketApi";
 import TicketForm from "./components/TicketForm";
 import TicketsPage from "./components/TicketsPage";
 import "./App.css";
@@ -12,6 +12,11 @@ function App() {
     setTickets(data);
   }
 
+  async function handleStatusChange(id, status) {
+    await updateTicketStatus(id, status);
+    loadTickets();
+  }
+
   useEffect(() => {
     loadTickets();
   }, []);
@@ -20,7 +25,7 @@ function App() {
     <div className = "app-container">
       <h1>TitanHelp</h1>
       <TicketForm onCreated = {loadTickets} />
-      <TicketsPage tickets = {tickets} />
+      <TicketsPage tickets={tickets} onStatusChange={handleStatusChange} />
 
     </div>
   );
