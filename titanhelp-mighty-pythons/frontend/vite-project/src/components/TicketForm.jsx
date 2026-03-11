@@ -16,8 +16,8 @@ function TicketForm({ onCreated }) {
   const [validationErrors, setValidationErrors] = useState({});
 
   const maxLengths = {
-    name: 50,
-    problem_description: 300,
+    name: 100,
+    problem_description: 1000,
   };
 
   function validateForm() {
@@ -88,10 +88,11 @@ function TicketForm({ onCreated }) {
           <div className="error">{validationErrors.name}</div>
         )}
 
-        <input
+        <textarea
           placeholder="Problem Description"
           value={form.problem_description}
           maxLength={maxLengths.problem_description}
+          rows={5}
           onChange={(e) =>
             setForm({ ...form, problem_description: e.target.value })
           }
