@@ -9,11 +9,14 @@ function TicketForm({ onCreated }) {
     priority: "Medium",
   });
 
-  //backend errors
-  const [error, setError] = useState(null);
-
-  //client validation errors
+  //client and backend field errors
   const [validationErrors, setValidationErrors] = useState({});
+
+  //unexpected errors (network, 500, etc.)
+  const [generalError, setGeneralError] = useState(null);
+
+  //success feedback
+  const [success, setSuccess] = useState(false);
 
   const maxLengths = {
     name: 100,
@@ -50,7 +53,8 @@ function TicketForm({ onCreated }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setError(null);
+    setGeneralError(null);
+    setSuccess(false);
 
     //client validation
     if (!validateForm()) return;
@@ -65,9 +69,14 @@ function TicketForm({ onCreated }) {
       });
 
       setValidationErrors({});
+      setSuccess(true);
       onCreated();
     } catch (err) {
-      setError(err.errors);
+      if (err.errors) {
+        setValidationErrors(err.errors);
+      } else {
+        setGeneralError("Something went wrong. Please try again.");
+      }
     }
   }
 
@@ -80,9 +89,10 @@ function TicketForm({ onCreated }) {
           placeholder="Name"
           value={form.name}
           maxLength={maxLengths.name}
-          onChange={(e) =>
-            setForm({ ...form, name: e.target.value })
-          }
+          onChange={(e) => {
+            setSuccess(false);
+            setForm({ ...form, name: e.target.value });
+          }}
         />
         {validationErrors.name && (
           <div className="error">{validationErrors.name}</div>
@@ -93,9 +103,10 @@ function TicketForm({ onCreated }) {
           value={form.problem_description}
           maxLength={maxLengths.problem_description}
           rows={5}
-          onChange={(e) =>
-            setForm({ ...form, problem_description: e.target.value })
-          }
+          onChange={(e) => {
+            setSuccess(false);
+            setForm({ ...form, problem_description: e.target.value });
+          }}
         />
         {validationErrors.problem_description && (
           <div className="error">
@@ -105,9 +116,10 @@ function TicketForm({ onCreated }) {
 
         <select
           value={form.priority}
-          onChange={(e) =>
-            setForm({ ...form, priority: e.target.value })
-          }
+          onChange={(e) => {
+            setSuccess(false);
+            setForm({ ...form, priority: e.target.value });
+          }}
         >
           <option>Low</option>
           <option>Medium</option>
@@ -121,13 +133,12 @@ function TicketForm({ onCreated }) {
         <button type="submit">Create Ticket</button>
       </form>
 
-      {/*backend errors*/}
-      {error && (
-        <div className="error">
-          {Object.entries(error).map(([key, value]) => (
-            <div key = {key} > {value}</div>
-          ))}
-        </div>
+      {generalError && (
+        <div className="error">{generalError}</div>
+      )}
+
+      {success && (
+        <div className="success">Ticket created successfully!</div>
       )}
     </div>
   );
