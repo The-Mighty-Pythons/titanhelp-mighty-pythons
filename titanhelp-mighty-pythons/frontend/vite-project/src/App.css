@@ -51,7 +51,8 @@ h3 {
 
 .error {
   color: red;
-  margin-top: 1rem;
+  margin-top: 0rem;
+  margin-bottom: .5rem;
 }
 
 .tickets-grid {

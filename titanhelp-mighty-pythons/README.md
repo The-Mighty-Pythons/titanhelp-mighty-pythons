@@ -88,7 +88,6 @@ The Mighty Pythons – TitanHelp Project Board
 </a>
 </p>
 
-
 <h2 id="data">Data Model</h2>
 <h3>Ticket</h3>
 <ul>
@@ -104,7 +103,7 @@ The Mighty Pythons – TitanHelp Project Board
 <p>
 The frontend and backend communicate using a documented JSON contract.
 See:
-<a href="titanhelp-mighty-pythons/docs/api-contract.md">
+<a href="docs/api-contract.md">
 TitanHelp API Contract Specification
 </a>.
 </p>
@@ -113,7 +112,7 @@ TitanHelp API Contract Specification
 <p>
 The application follows a layered architecture with clear separation of concerns. Documentation of the architecture and design decisions is provided in the project link below.
 See:
-<a href="titanhelp-mighty-pythons/docs/architecture.md">
+<a href="docs/architecture.md">
 TitanHelp Architecture and Design Documentation
 </a>.
 </p>
@@ -139,25 +138,25 @@ We do not support running the project from Visual Studio 2022.
 <h3>Ideal Method: Run via VS Code</h3>
 <ol>
   <li>Open VS Code</li>
-  <li>Select Open folder. Inside  TitanHelpProject, select <code>titanhelp-mighty-pythons/</code></li>
+  <li>Select Open folder and open <code>titanhelp-mighty-pythons/</code></li>
   <li>Open a new Terminal in VSCode</li>
-  <li>In VSCode use the ctrl+shift+p command (Cmd+Shift+P on macOS) to access the Command Palette</li>
-  <li>Select Tasks: Run Task</li>
-  <li>Select the Setup Everything (First Time) option</li>
+  <li>In VSCode use the <code>Ctrl+Shift+P</code> command (<code>Cmd+Shift+P</code> on macOS) to access the Command Palette</li>
+  <li>Select <strong>Tasks: Run Task</strong></li>
+  <li>Select the <strong>Setup Everything (First Time)</strong> option</li>
   <img src="docs/FirstTimeSetup.png" alt="VSCode Task Menu showing Setup Everything (First Time)" width="600" />
-  <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View -> Run)</li>
+  <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View → Run)</li>
   <li>Select: <code>Full Stack: Backend + Frontend</code></li>
   <li>Click the green play button</li>
 </ol>
 <p>You should see a full list of tasks running in the call stack, and no errors in the terminal.</p>
-<p>From here, until automatic launch is configured, you will open a new browser window and enter 
+<p>From here, until automatic launch is configured, you will open a new browser window and enter
  <code>http://localhost:5173</code> for the frontend, and <code>http://127.0.0.1:5000/api/tickets</code> for the backend.</p>
 <p>Stop the project in VS Code when done.</p>
 
 <h3>Running Tests</h3>
 <p>For now you will manually run tests.</p>
-<p>Go to the backend directory with file explorer <code>\TitanHelpProject\titanhelp-mighty-pythons\backend\TitanHelp.Backend</code></p>
-<p>Open an new terminal session and run <code>python -m pytest -v</code></p>
+<p>Go to the backend directory with file explorer <code>\titanhelp-mighty-pythons\backend\TitanHelp.Backend</code></p>
+<p>Open a new terminal session and run <code>python -m pytest -v</code></p>
 
 <h3>Database Location</h3>
 <p>For local development, the SQLite database file is stored at:</p>
@@ -166,24 +165,6 @@ We do not support running the project from Visual Studio 2022.
 <p><code>flask db init</code></p>
 <p><code>flask db migrate</code></p>
 <p><code>flask db upgrade</code></p>
-
-<h3>Alternative Methods</h3>
-<h4>Windows</h4>
-<ol>
-  <li>Clone the repo</li>
-  <li>Open a terminal in the repo folder: <code>titanhelp-mighty-pythons/</code></li>
-  <li>Run:</li>
-</ol>
-<pre><code>start-dev.bat</code></pre>
-
-<h4>Mac / Linux</h4>
-<ol>
-  <li>Clone the repo</li>
-  <li>Open a terminal in the repo folder: <code>titanhelp-mighty-pythons/</code></li>
-  <li>Run:</li>
-</ol>
-<pre><code>chmod +x start-dev.sh
-./start-dev.sh</code></pre>
 
 <h3>What You Should See</h3>
 <ul>
