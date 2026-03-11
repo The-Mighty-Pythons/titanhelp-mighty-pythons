@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './TicketsTable.css';
 
-const TicketsTable = ({ tickets = [] }) => {
+const TicketsTable = ({ tickets = [], onStatusChange }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const ticketsPerPage = 5;
     
@@ -38,7 +38,15 @@ const TicketsTable = ({ tickets = [] }) => {
                                 ? new Date(ticket.date).toLocaleDateString() 
                                 : ""}
                                 </td>
-                            <td>{ticket.status}</td>
+                            <td>
+                                <select
+                                    value={ticket.status}
+                                    onChange={(e) => onStatusChange(ticket.id, e.target.value)}
+                                >
+                                    <option>Open</option>
+                                    <option>Closed</option>
+                                </select>
+                            </td>
                             <td>{ticket.priority}</td>
                             <td>
                                 {ticket.problem_description.length > 50
