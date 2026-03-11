@@ -32,3 +32,12 @@ def test_create_ticket_appears_in_get_all(app):
     tickets = service.get_all_tickets()
     assert len(tickets) == 1
     assert tickets[0]["name"] == "List Me"
+
+def test_create_ticket_invalid_priority_raises(app):
+    service = TicketService()
+    with pytest.raises(ValueError):
+        service.create_ticket(
+            name="Valid Name",
+            problem_description="Valid description.",
+            priority="Critical"
+        )
