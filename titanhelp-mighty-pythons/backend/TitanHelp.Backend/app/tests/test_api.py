@@ -1,6 +1,5 @@
 import json
 
-
 def test_get_tickets_returns_200(client):
     response = client.get("/api/tickets")
     assert response.status_code == 200
@@ -103,3 +102,53 @@ def test_post_ticket_empty_body_returns_400(client):
     assert response.status_code == 400
     data = response.get_json()
     assert "errors" in data
+
+def test_update_ticket_status_success(client):
+    created = client.post(
+        "/api/tickets",
+        data=json.dumps({
+            "name": "Patch Me",
+            "problem_description": "Will be closed.",
+            "priority": "Low"
+        }),
+        content_type="application/json"
+    ).get_json()
+
+    response = client.patch(
+        f"/api/tickets/{created['id']}/status",
+        data=json.dumps({"status": "Closed"}),
+        content_type="application/json"
+    )
+    assert response.status_code == 200
+    data = response.get_json()
+    assert data["status"] == "Closed"
+    assert data["id"] == created["id"]
+
+def test_update_ticket_status_invalid_returns_400(client):
+    created = client.post(
+        "/api/tickets",
+        data=json.dumps({
+            "name": "Bad Status",
+            "problem_description": "Invalid status test.",
+            "priority": "Medium"
+        }),
+        content_type="application/json"
+    ).get_json()
+
+    response = client.patch(
+        f"/api/tickets/{created['id']}/status",
+        data=json.dumps({"status": "Pending"}),
+        content_type="application/json"
+    )
+    assert response.status_code == 400
+    data = response.get_json()
+    assert "errors" in data
+    assert "status" in data["errors"]
+
+def test_update_ticket_status_not_found_returns_404(client):
+    response = client.patch(
+        "/api/tickets/9999/status",
+        data=json.dumps({"status": "Closed"}),
+        content_type="application/json"
+    )
+    assert response.status_code == 404

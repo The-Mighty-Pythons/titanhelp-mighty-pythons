@@ -1,5 +1,5 @@
 ##this is where we will define service functions for handling business logic related to tickets
-## todo : get ticket(id), update ticket(id), delete ticket(id), which is a soft delete when the ticket closes
+## todo : get ticket(id), delete ticket(id)
 
 from ..models.ticket import Ticket, TicketPriority
 from ..repositories.ticket_repository import TicketRepository
@@ -41,3 +41,9 @@ class TicketService:
 
         saved = self.repo.create_ticket(ticket)
         return saved.to_dict()
+
+    def update_ticket_status(self, ticket_id: int, status: str) -> dict | None:
+        updated = self.repo.update_status(ticket_id, status)
+        if updated is None:
+            return None
+        return updated.to_dict()

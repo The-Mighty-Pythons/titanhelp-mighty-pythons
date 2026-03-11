@@ -2,6 +2,14 @@
 ## todo: ?? def validate_ticket_payload(payload: dict) -> dict:
 
 ALLOWED_PRIORITIES = {"Low", "Medium", "High"}
+ALLOWED_STATUSES = {"Open", "Closed"}
+
+def validate_update_status(payload: dict) -> dict:
+    errors = {}
+    status = payload.get("status")
+    if status not in ALLOWED_STATUSES:
+        errors["status"] = "Status must be Open or Closed."
+    return errors
 
 def validate_create_ticket(payload: dict) -> dict:
     errors = {}
