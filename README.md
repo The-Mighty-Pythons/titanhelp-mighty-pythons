@@ -206,3 +206,83 @@ We do not support running the project from Visual Studio 2022.
     If it does not load, check the backend terminal for the error message.
   </li>
 </ul>
+
+<h2>Documentation</h2>
+
+<h3>Requirements Analysis</h3>
+
+<h4>Initial Scope</h4>
+<p>
+The initial goal of the TitanHelp system was to develop a ticket management application capable of handling basic helpdesk functionality. The core system requirements included the ability to create support tickets, view submitted tickets, update ticket status, and manage ticket priority levels.
+</p>
+
+<h4>Scope Adjustments</h4>
+<p>
+During development, minor adjustments were made to ensure alignment with project requirements and the professor’s provided specification. These adjustments primarily involved refining validation logic within the service layer and ensuring that the database model matched the required schema. These changes helped maintain consistency between the application design and the project expectations.
+</p>
+
+<h4>Feature Prioritization</h4>
+
+<p><strong>High Priority</strong></p>
+<ul>
+  <li>Ticket creation</li>
+  <li>Ticket retrieval</li>
+  <li>Database integration</li>
+</ul>
+
+<p><strong>Medium Priority</strong></p>
+<ul>
+  <li>Ticket updates</li>
+  <li>Priority handling</li>
+</ul>
+
+<p><strong>Lower Priority</strong></p>
+<ul>
+  <li>Additional validation</li>
+  <li>Future enhancements</li>
+</ul>
+
+
+<h3>Development Process</h3>
+<p>
+The TitanHelp project was developed collaboratively using GitHub for version control and task coordination. Development tasks were organized through GitHub issues and the team project board, allowing contributors to track progress and manage responsibilities across the application’s layers.
+</p>
+
+<p>
+The backend system follows a layered architecture consisting of controllers, services, repositories, and ORM models. Each team member implemented specific components within this structure while working on separate branches to isolate changes during development.
+</p>
+
+<p>
+Team members submitted pull requests when completing tasks, allowing code to be reviewed and merged into the main repository. This workflow helped maintain code stability while enabling collaborative development and version control across the team.
+</p>
+
+
+<h3>Project Evaluation</h3>
+
+<h4>Achievements</h4>
+<ul>
+  <li>Successfully implemented a layered backend architecture</li>
+  <li>Integrated database persistence using SQLAlchemy</li>
+  <li>Established a GitHub collaboration workflow</li>
+  <li>Implemented ticket service and repository functionality</li>
+</ul>
+
+<h4>Challenges</h4>
+<ul>
+  <li>Coordinating development across multiple architectural layers</li>
+  <li>Ensuring database models matched the provided specification</li>
+  <li>Managing version control across multiple contributors</li>
+</ul>
+
+<h4>Code Quality Assessment</h4>
+<p>
+The team followed several best practices to maintain code quality throughout development. These included maintaining clear layer separation, using pull requests to review code changes, and writing structured commit messages to document updates. These practices helped ensure consistency and maintainability across the project codebase.
+</p>
+
+<h4>Future Enhancements</h4>
+<ul>
+  <li>Implementation of an authentication system</li>
+  <li>Improved user interface for ticket management</li>
+  <li>Advanced ticket filtering and search functionality</li>
+  <li>Deployment to a cloud platform</li>
+</ul>
