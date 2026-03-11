@@ -27,3 +27,21 @@ export async function createTicket(ticketData) {
 
   return data;
 }
+
+export async function updateTicketStatus(id, status) {
+  const response = await fetch(`${API_BASE}/tickets/${id}/status`, {
+    method: "PATCH", // PATCH is the HTTP protocol verb for partial updates — required keyword
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ status }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw data;
+  }
+
+  return data;
+}

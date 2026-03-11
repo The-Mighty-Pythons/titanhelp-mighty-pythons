@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './TicketsTable.css';
 
-const TicketsTable = ({ tickets = [] }) => {
+const TicketsTable = ({ tickets = [], onStatusChange }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const ticketsPerPage = 5;
     
@@ -10,9 +10,10 @@ const TicketsTable = ({ tickets = [] }) => {
     }
 
     //calculate tickets for current page
-    const startIndex = (currentPage -1) * ticketsPerPage;
+    const totalPages = Math.ceil(tickets.length / ticketsPerPage);
+    const startIndex = (currentPage - 1) * ticketsPerPage;
     const currentTickets = tickets.slice(
-        startIndex, 
+        startIndex,
         startIndex + ticketsPerPage
     );
 
@@ -37,7 +38,15 @@ const TicketsTable = ({ tickets = [] }) => {
                                 ? new Date(ticket.date).toLocaleDateString() 
                                 : ""}
                                 </td>
-                            <td>{ticket.status}</td>
+                            <td>
+                                <select
+                                    value={ticket.status}
+                                    onChange={(e) => onStatusChange(ticket.id, e.target.value)}
+                                >
+                                    <option>Open</option>
+                                    <option>Closed</option>
+                                </select>
+                            </td>
                             <td>{ticket.priority}</td>
                             <td>
                                 {ticket.problem_description.length > 50
@@ -57,9 +66,10 @@ const TicketsTable = ({ tickets = [] }) => {
                 >
                     Previous
                 </button>
+                <span>Page {currentPage} of {totalPages}</span>
                 <button
                     onClick={() => setCurrentPage((p) => p + 1)}
-                    disabled={startIndex + ticketsPerPage >= tickets.length}
+                    disabled={currentPage === totalPages}
                 >
                     Next
                 </button>
