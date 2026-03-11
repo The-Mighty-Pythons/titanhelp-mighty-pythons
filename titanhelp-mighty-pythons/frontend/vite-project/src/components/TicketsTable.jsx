@@ -10,9 +10,10 @@ const TicketsTable = ({ tickets = [] }) => {
     }
 
     //calculate tickets for current page
-    const startIndex = (currentPage -1) * ticketsPerPage;
+    const totalPages = Math.ceil(tickets.length / ticketsPerPage);
+    const startIndex = (currentPage - 1) * ticketsPerPage;
     const currentTickets = tickets.slice(
-        startIndex, 
+        startIndex,
         startIndex + ticketsPerPage
     );
 
@@ -57,9 +58,10 @@ const TicketsTable = ({ tickets = [] }) => {
                 >
                     Previous
                 </button>
+                <span>Page {currentPage} of {totalPages}</span>
                 <button
                     onClick={() => setCurrentPage((p) => p + 1)}
-                    disabled={startIndex + ticketsPerPage >= tickets.length}
+                    disabled={currentPage === totalPages}
                 >
                     Next
                 </button>
