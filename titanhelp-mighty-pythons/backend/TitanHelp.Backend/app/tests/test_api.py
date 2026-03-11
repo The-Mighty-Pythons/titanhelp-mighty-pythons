@@ -29,3 +29,18 @@ def test_post_ticket_success(client):
     assert data["status"] == "Open"
     assert "id" in data
     assert "date" in data
+
+def test_post_ticket_appears_in_list(client):
+    payload = {
+        "name": "Appears In List",
+        "problem_description": "Check list after create.",
+        "priority": "Low"
+    }
+    client.post(
+        "/api/tickets",
+        data=json.dumps(payload),
+        content_type="application/json"
+    )
+    response = client.get("/api/tickets")
+    data = response.get_json()
+    assert any(t["name"] == "Appears In List" for t in data)
