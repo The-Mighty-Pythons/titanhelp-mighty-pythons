@@ -40,18 +40,18 @@
   </thead>
   <tbody>
     <tr>
-      <td>Amanda Crotty</td>
-      <td>Application Management / Business Logic / Unit Tests</td>
+      <td><!-- [GROUP LEADER NAME] --></td>
+      <td><!-- e.g. Application / Business Logic --></td>
       <td>Group Leader</td>
     </tr>
     <tr>
-      <td>Sydney Gilchrist</td>
-      <td>Presentation (Frontend)</td>
+      <td><!-- [MEMBER NAME] --></td>
+      <td><!-- e.g. Presentation (Frontend) --></td>
       <td>Team Member</td>
     </tr>
     <tr>
-      <td>Sophia Sipayboun</td>
-      <td>Data Access</td>
+      <td><!-- [MEMBER NAME] --></td>
+      <td><!-- e.g. Data Access --></td>
       <td>Team Member</td>
     </tr>
   </tbody>
@@ -59,52 +59,33 @@
 
 <h3>Individual GitHub Contribution Summaries</h3>
 
-<h4>Amanda Crotty — Application / Business Logic Layer &amp; Project Lead</h4>
+<h4><!-- [NAME] --> — <!-- [Layer] --></h4>
 <ul>
-  <li><strong>Primary responsibilities:</strong> API contract, domain model (B2), REST API endpoints (B7), server-side validation (B6), user feedback layer (P5), update ticket status feature (B10), DTO/field mapping (I2), backend test suite (Q1), domain layer documentation, project documentation, end-to-end verification</li>
-  <li><strong>Pull requests created:</strong>
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/55">#55 I2 – API markdown</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/53">#53 B10 – update ticket status</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/52">#52 Q1 – backend test completion</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/50">#50 P5 – user feedback</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/49">#49 – validation uniform</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/40">#40 F2 – API contract</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/39">#39 – backend testing layer</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/33">#33 F1 – repo run instructions</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/1">#1 – initial README</a>
-  </li>
-  <li><strong>Note:</strong> As group leader, Amanda also merged several pull requests on behalf of teammates whose work is attributed below.</li>
+  <li><!-- Primary contributions: e.g. "Implemented Flask app factory, service layer, and validation schema" --></li>
+  <li><!-- Pull requests created: e.g. "feature/b1-flask-app-factory, feature/b5-ticket-service" --></li>
+  <li><!-- Pull requests reviewed: --></li>
 </ul>
 
-<h4>Sophia Sipayboun — Data Access Layer</h4>
+<h4><!-- [NAME] --> — <!-- [Layer] --></h4>
 <ul>
-  <li><strong>Primary responsibilities:</strong> Flask app factory and configuration (B1), SQLAlchemy ORM model (B3), ticket service / transaction scripts (B5), ticket repository layer (B4), database initialization and migrations (B8), data access documentation, project documentation, end-to-end verification</li>
-  <li><strong>Pull requests created:</strong>
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/45">#45 B8 – database initialization and migrations</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/44">#44 B4 – ticket repository layer</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/41">#41 B5 – ticket service transaction scripts</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/36">#36 B3 – SQLAlchemy ORM model</a>
-  </li>
+  <li><!-- Primary contributions --></li>
+  <li><!-- Pull requests created --></li>
+  <li><!-- Pull requests reviewed --></li>
 </ul>
 
-<h4>Sydney Gilchrist — Presentation Layer</h4>
+<h4><!-- [NAME] --> — <!-- [Layer] --></h4>
 <ul>
-  <li><strong>Primary responsibilities:</strong> React project setup and structure (P1), CORS configuration (F3), ticket list table component (P3), ticket create form with client-side validation (P4), user feedback and error display (P5), page loading/error states (P2), presentation layer documentation</li>
-  <li><strong>Pull requests created:</strong>
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/46">#46 P4 – ticket create form with client validation</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/43">#43 P3 – ticket list table component</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/35">#35 P1 – Vite frontend setup</a>,
-    <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/pull/32">#32 F3 – CORS configuration</a>
-  </li>
+  <li><!-- Primary contributions --></li>
+  <li><!-- Pull requests created --></li>
+  <li><!-- Pull requests reviewed --></li>
 </ul>
-
 
 <h3>Team Collaboration Assessment</h3>
 <p>
-  The team held weekly syncs via Discord to coordinate integration points and review pull requests together. 
-  Work was distributed evenly across layers with each member taking ownership of their assigned responsibilities. 
-  Code reviews were conducted on all pull requests before merging to dev. 
-  Weekly merges to main were performed.
+  <!-- Describe how the team worked together. Example: "The team held weekly syncs via [Discord/Teams/etc.] to coordinate
+  integration points and review pull requests together. Work was distributed evenly across layers with each member
+  taking ownership of their assigned responsibilities. Code reviews were conducted on all pull requests before merging
+  to main." -->
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -119,7 +100,7 @@
 <p>
   The primary purpose of this project is to demonstrate a clear, layered architecture where each layer has a
   single, well-defined responsibility. The application is intentionally scoped to a focused set of features so
-  that the architectural structure is the central demonstration.
+  that the architectural structure — not feature volume — is the central demonstration.
 </p>
 
 <h3>Technology Stack</h3>
@@ -158,17 +139,14 @@
   design pattern justifications, is provided here:
 </p>
 <p>
-  <a href="titanhelp-mighty-pythons/docs/architecture.md">TitanHelp Architecture and Design Documentation</a>
+  <a href="docs/architecture.md">TitanHelp Architecture and Design Documentation</a>
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <h2 id="requirements-analysis">Requirements Analysis</h2>
 
 <h3>Initial Project Requirements</h3>
-<p>
-  The initial goal of TitanHelp was to develop a ticket management application capable of handling
-  basic help desk functionality. The core requirements defined at project start were:
-</p>
+<p>The core requirements defined at project start were:</p>
 <ul>
   <li>Display all existing tickets in a list or table</li>
   <li>Create new tickets via a form with validation</li>
@@ -178,11 +156,6 @@
 </ul>
 
 <h3>Requirement Changes During Development</h3>
-<p>
-  During development, adjustments were made to ensure alignment with the project specification.
-  These included refining validation logic within the service layer and confirming that the database
-  model matched the required schema. The following table documents the more significant scope changes:
-</p>
 <table>
   <thead>
     <tr><th>Change</th><th>Original</th><th>Revised</th><th>Rationale</th></tr>
@@ -199,6 +172,12 @@
       <td>Plan included a <code>useTickets.js</code> hook for state management</td>
       <td>State management kept in <code>App.jsx</code> directly</td>
       <td>Core features were prioritized; hook extraction is a refactor that does not change behavior and is documented as a future improvement in the architecture docs</td>
+    </tr>
+    <tr>
+      <td><!-- [Any other changes your team made] --></td>
+      <td><!-- Original requirement --></td>
+      <td><!-- What you actually did --></td>
+      <td><!-- Why --></td>
     </tr>
   </tbody>
 </table>
@@ -279,7 +258,7 @@
   <strong>snake_case</strong> consistently. Full endpoint documentation including sample payloads and error
   formats is in the API contract:
 </p>
-<p><a href="titanhelp-mighty-pythons/docs/api-contract.md">TitanHelp API Contract Specification</a></p>
+<p><a href="docs/api-contract.md">TitanHelp API Contract Specification</a></p>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <h2 id="process">Development Process</h2>
@@ -293,16 +272,10 @@
 </ul>
 
 <h3>Code Review Process</h3>
-<p>
-  The backend system follows a layered architecture consisting of controllers, services, repositories,
-  and ORM models. Each team member implemented specific components within their assigned layer while
-  working on separate branches to isolate changes. Pull request reviews were used to verify that new
-  code stayed within the correct layer boundary — for example, confirming that SQLAlchemy queries
-  remained inside the repository and that service methods contained no Flask objects.
-</p>
 <ul>
   <li>Pull requests included a description of what changed and why</li>
-  <li>Reviewers checked that changes stayed within the correct architectural layer</li>
+  <li>Reviewers checked that changes stayed within the correct architectural layer (e.g., no SQLAlchemy calls outside the repository)</li>
+  <li><!-- [Any other review standards your team followed] --></li>
 </ul>
 
 <h3>Issue Tracking</h3>
@@ -346,7 +319,7 @@
   <li>Fill in the <strong>Problem Description</strong> field (required, max 1000 characters)</li>
   <li>Select a <strong>Priority</strong> from the dropdown: Low, Medium, or High</li>
   <li>Click <strong>Submit</strong></li>
-  <li>The new ticket will appear in the table immediately.</li>
+  <li>The new ticket will appear in the table immediately — no page refresh needed</li>
 </ol>
 <p>
   If any required field is missing or exceeds the character limit, an error message will appear below
@@ -361,26 +334,14 @@
 </p>
 
 <h4>Screenshots</h4>
-
-<h3>Ticket List View</h3>
-<p>The ticket list displays all created tickets with their details in a table format.</p>
-<img src="titanhelp-mighty-pythons/docs/screenshots/TicketListView1.png" alt="Ticket List View - Initial Display" width="600" />
-<img src="titanhelp-mighty-pythons/docs/screenshots/TicketListView2.png" alt="Ticket List View - Full Table" width="600" />
-
-<h3>Ticket Creation Form</h3>
-<p>The ticket form includes validation to ensure all required fields are properly filled.</p>
-<img src="titanhelp-mighty-pythons/docs/screenshots/TicketFormError1.png" alt="Ticket Form - Validation Error 1" width="600" />
-<img src="titanhelp-mighty-pythons/docs/screenshots/TicketFormError2.png" alt="Ticket Form - Validation Error 2" width="600" />
-<img src="titanhelp-mighty-pythons/docs/screenshots/TicketFormError3.png" alt="Ticket Form - Validation Error 3" width="600" />
-
-<h3>Ticket List After Creation</h3>
-<p>After successfully creating a ticket, it immediately appears in the ticket list.</p>
-<img src="titanhelp-mighty-pythons/docs/screenshots/TicketListAfterCreate.png" alt="Ticket List - After Creating a Ticket" width="600" />
+<!-- [INSERT SCREENSHOT: ticket list view] -->
+<!-- [INSERT SCREENSHOT: ticket create form with validation errors] -->
+<!-- [INSERT SCREENSHOT: ticket list after successful create] -->
 
 <h3>API Documentation</h3>
 <p>
   The full REST API documentation including all endpoints, request and response shapes, and error formats
-  is available in the <a href="titanhelp-mighty-pythons/docs/api-contract.md">API Contract</a>.
+  is available in the <a href="docs/api-contract.md">API Contract</a>.
 </p>
 
 <h3>Troubleshooting</h3>
@@ -405,53 +366,26 @@
 <h3>Technical Achievements</h3>
 <ul>
   <li>Implemented a complete, working full-stack application with genuine separation between all three architectural layers</li>
-  <li>Backend service layer contains no Flask objects, making it fully decoupled from the HTTP layer and testable in isolation</li>
+  <li>Backend service layer contains zero Flask objects — it is fully decoupled from the HTTP layer and testable in isolation</li>
   <li>Repository pattern successfully hides all SQLAlchemy from the service and controller layers</li>
   <li>Comprehensive backend test suite covering API, service, repository, and model layers with an in-memory test database</li>
   <li>Schema managed through versioned Flask-Migrate migrations, demonstrating repeatable, professional database management</li>
   <li>Consistent API contract documented upfront and honored by both frontend and backend throughout development</li>
-  <li>Established a GitHub collaboration workflow with feature branches, pull request reviews, and integration through a shared <code>dev</code> branch</li>
 </ul>
 
 <h3>Challenges Encountered</h3>
 <ul>
-  <li>
-    <strong>API contract alignment:</strong> Coordinating the API contract early was essential. We encountered
-    a field naming mismatch (camelCase vs. snake_case) during initial integration and resolved it by
-    explicitly documenting snake_case in the contract before writing any integration code. This prevented
-    the same issue from recurring across subsequent features.
-  </li>
-  <li>
-    <strong>Coordinating development across layers:</strong> Ensuring that database models matched the
-    required specification and that each layer's interface was ready for the next required active
-    communication across the team. Changes to the data model or API contract had downstream effects that
-    needed to be caught early through pull request review.
-  </li>
-  <li>
-    <strong>Unplanned feature scope expansion:</strong> The ability to update a ticket's status was not
-    included in the original project plan. During end-to-end testing, the team recognized that a help desk
-    system with no way to close a ticket did not reflect a realistic workflow. The
-    <code>PATCH /api/tickets/:id/status</code> endpoint and inline status dropdown were added as an unplanned
-    sprint item (B10). This reinforced the value of reviewing requirements against real user workflows
-    before finalizing scope.
-  </li>
-  <li>
-    <strong>Testing integrated late in development:</strong> Backend unit and integration tests were written
-    as a dedicated effort near the end of the project rather than alongside feature development. While the
-    final test suite provides good coverage, writing tests after the fact meant bugs were caught later than
-    they could have been. In future projects, the team would prioritize writing tests incrementally with
-    each feature.
-  </li>
+  <li><!-- [Describe a real technical challenge and how you solved it. Example: "Coordinating the API contract early was essential — we ran into a field naming mismatch (camelCase vs snake_case) during initial integration and resolved it by explicitly documenting snake_case in the contract before writing any integration code."] --></li>
+  <li><!-- [Another challenge] --></li>
+  <li><!-- [Another challenge] --></li>
 </ul>
 
 <h3>Code Quality Assessment</h3>
 <p>
-  The team followed several best practices to maintain code quality throughout development, including
-  clear layer separation, pull request reviews, and structured commit messages. The backend layer
-  boundaries are clean and consistently enforced. The frontend component structure is functional but
-  could benefit from further decomposition — <code>App.jsx</code> manages state that would ideally live
-  in a dedicated <code>useTickets</code> hook. Overall the code is readable, the patterns are applied
-  consistently, and the test suite gives confidence in the backend behavior.
+  <!-- Reflect honestly on the code quality. Example: "The backend layer separation is clean and consistently
+  enforced. The frontend component structure is functional but could benefit from further decomposition —
+  App.jsx manages state that would ideally live in a dedicated useTickets hook. Overall the code is readable,
+  the patterns are applied consistently, and the test suite gives confidence in the backend behavior." -->
 </p>
 
 <h3>Future Enhancements</h3>
@@ -460,19 +394,16 @@
   <li><strong>Frontend component tests</strong> — Add Vitest/React Testing Library tests for <code>TicketForm</code> and <code>TicketsTable</code></li>
   <li><strong>Single ticket view</strong> — <code>GET /api/tickets/:id</code> endpoint and a detail page</li>
   <li><strong>Delete ticket</strong> — Allow tickets to be removed from the system</li>
-  <li><strong>Authentication</strong> — User login so tickets are associated with the submitter</li>
-  <li><strong>Advanced filtering and search</strong> — Filter tickets by status, priority, or date range</li>
   <li><strong>Production database</strong> — Replace SQLite with PostgreSQL for a deployed environment</li>
-  <li><strong>Cloud deployment</strong> — Host the application on a cloud platform for public access</li>
+  <li><!-- [Any other ideas your team had] --></li>
 </ul>
 
 <h3>Team Collaboration Evaluation</h3>
 <p>
-  Communication was consistent throughout the project. Establishing the API contract in the first sprint
-  prevented the most common full-stack integration problems. Code reviews were thorough and helped catch
-  layer violations before they merged to main. If we were to do this again, we would set up the migrations
-  earlier in the process to avoid a manual schema reset mid-sprint, and we would write tests alongside
-  each feature rather than in a single push at the end.
+  <!-- Reflect on how the team worked together. Example: "Communication was consistent throughout the project.
+  Establishing the API contract in the first sprint prevented the most common full-stack integration problems.
+  Code reviews were thorough and helped catch layer violations before they merged to main. If we were to do
+  this again, we would set up the migrations earlier in the process to avoid a manual schema reset mid-sprint." -->
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
