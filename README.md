@@ -361,9 +361,21 @@
 </p>
 
 <h4>Screenshots</h4>
-<!-- [INSERT SCREENSHOT: ticket list view] -->
-<!-- [INSERT SCREENSHOT: ticket create form with validation errors] -->
-<!-- [INSERT SCREENSHOT: ticket list after successful create] -->
+
+<h3>Ticket List View</h3>
+<p>The ticket list displays all created tickets with their details in a table format.</p>
+<img src="docs/screenshots/TicketListView1.png" alt="Ticket List View - Initial Display" width="600" />
+<img src="docs/screenshots/TicketListView2.png" alt="Ticket List View - Full Table" width="600" />
+
+<h3>Ticket Creation Form</h3>
+<p>The ticket form includes validation to ensure all required fields are properly filled.</p>
+<img src="docs/screenshots/TicketFormError1.png" alt="Ticket Form - Validation Error 1" width="600" />
+<img src="docs/screenshots/TicketFormError2.png" alt="Ticket Form - Validation Error 2" width="600" />
+<img src="docs/screenshots/TicketFormError3.png" alt="Ticket Form - Validation Error 3" width="600" />
+
+<h3>Ticket List After Creation</h3>
+<p>After successfully creating a ticket, it immediately appears in the ticket list.</p>
+<img src="docs/screenshots/TicketListAfterCreate.png" alt="Ticket List - After Creating a Ticket" width="600" />
 
 <h3>API Documentation</h3>
 <p>
