@@ -31,7 +31,7 @@ Returns all tickets.
 [
   {
     "id": 1,
-    "name": "Amanda Crotty",
+    "name": "Arthur Everest",
     "date": "2026-02-09T20:15:12Z",
     "problem_description": "Printer is jammed.",
     "status": "Open",
@@ -49,7 +49,7 @@ Creates a new ticket.
 **Request body**
 ```json
 {
-  "name": "Amanda Crotty",
+  "name": "Arthur Everest",
   "problem_description": "Printer is jammed.",
   "priority": "Medium"
 }
@@ -59,7 +59,7 @@ Creates a new ticket.
 ```json
 {
   "id": 1,
-  "name": "Amanda Crotty",
+  "name": "Arthur Everest",
   "date": "2026-02-09T20:15:12Z",
   "problem_description": "Printer is jammed.",
   "status": "Open",
@@ -97,7 +97,7 @@ Updates the status of an existing ticket.
 ```json
 {
   "id": 1,
-  "name": "Amanda Crotty",
+  "name": "Arthur Everest",
   "date": "2026-02-09T20:15:12Z",
   "problem_description": "Printer is jammed.",
   "status": "Closed",
