@@ -158,7 +158,7 @@
   design pattern justifications, is provided here:
 </p>
 <p>
-  <a href="docs/architecture.md">TitanHelp Architecture and Design Documentation</a>
+  <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/blob/main/titanhelp-mighty-pythons/docs/architecture.md">TitanHelp Architecture and Design Documentation</a>
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -279,7 +279,7 @@
   <strong>snake_case</strong> consistently. Full endpoint documentation including sample payloads and error
   formats is in the API contract:
 </p>
-<p><a href="docs/api-contract.md">TitanHelp API Contract Specification</a></p>
+<p><a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/blob/main/titanhelp-mighty-pythons/docs/api-contract.md">TitanHelp API Contract Specification</a></p>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <h2 id="process">Development Process</h2>
@@ -364,23 +364,23 @@
 
 <h3>Ticket List View</h3>
 <p>The ticket list displays all created tickets with their details in a table format.</p>
-<img src="docs/screenshots/TicketListView1.png" alt="Ticket List View - Initial Display" width="600" />
-<img src="docs/screenshots/TicketListView2.png" alt="Ticket List View - Full Table" width="600" />
+<img src="https://raw.githubusercontent.com/The-Mighty-Pythons/titanhelp-mighty-pythons/main/titanhelp-mighty-pythons/docs/screenshots/TicketListView1.png" alt="Ticket List View - Initial Display" width="600" />
+<img src="https://raw.githubusercontent.com/The-Mighty-Pythons/titanhelp-mighty-pythons/main/titanhelp-mighty-pythons/docs/screenshots/TicketListView2.png" alt="Ticket List View - Full Table" width="600" />
 
 <h3>Ticket Creation Form</h3>
 <p>The ticket form includes validation to ensure all required fields are properly filled.</p>
-<img src="docs/screenshots/TicketFormError1.png" alt="Ticket Form - Validation Error 1" width="600" />
-<img src="docs/screenshots/TicketFormError2.png" alt="Ticket Form - Validation Error 2" width="600" />
-<img src="docs/screenshots/TicketFormError3.png" alt="Ticket Form - Validation Error 3" width="600" />
+<img src="https://raw.githubusercontent.com/The-Mighty-Pythons/titanhelp-mighty-pythons/main/titanhelp-mighty-pythons/docs/screenshots/TicketFormError1.png" alt="Ticket Form - Validation Error 1" width="600" />
+<img src="https://raw.githubusercontent.com/The-Mighty-Pythons/titanhelp-mighty-pythons/main/titanhelp-mighty-pythons/docs/screenshots/TicketFormError2.png" alt="Ticket Form - Validation Error 2" width="600" />
+<img src="https://raw.githubusercontent.com/The-Mighty-Pythons/titanhelp-mighty-pythons/main/titanhelp-mighty-pythons/docs/screenshots/TicketFormError3.png" alt="Ticket Form - Validation Error 3" width="600" />
 
 <h3>Ticket List After Creation</h3>
 <p>After successfully creating a ticket, it immediately appears in the ticket list.</p>
-<img src="docs/screenshots/TicketListAfterCreate.png" alt="Ticket List - After Creating a Ticket" width="600" />
+<img src="https://raw.githubusercontent.com/The-Mighty-Pythons/titanhelp-mighty-pythons/main/titanhelp-mighty-pythons/docs/screenshots/TicketListAfterCreate.png" alt="Ticket List - After Creating a Ticket" width="600" />
 
 <h3>API Documentation</h3>
 <p>
   The full REST API documentation including all endpoints, request and response shapes, and error formats
-  is available in the <a href="docs/api-contract.md">API Contract</a>.
+  is available in the <a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/blob/main/titanhelp-mighty-pythons/docs/api-contract.md">API Contract</a>.
 </p>
 
 <h3>Troubleshooting</h3>
@@ -566,7 +566,7 @@ The Mighty Pythons – TitanHelp Project Board
 <p>
 The frontend and backend communicate using a documented JSON contract.
 See:
-<a href="docs/api-contract.md">
+<a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/blob/main/titanhelp-mighty-pythons/docs/api-contract.md">
 TitanHelp API Contract Specification
 </a>.
 </p>
@@ -575,7 +575,7 @@ TitanHelp API Contract Specification
 <p>
 The application follows a layered architecture with clear separation of concerns. Documentation of the architecture and design decisions is provided in the project link below.
 See:
-<a href="docs/architecture.md">
+<a href="https://github.com/The-Mighty-Pythons/titanhelp-mighty-pythons/blob/main/titanhelp-mighty-pythons/docs/architecture.md">
 TitanHelp Architecture and Design Documentation
 </a>.
 </p>
@@ -607,7 +607,7 @@ We do not support running the project from Visual Studio 2022.
   <li>In VSCode use the <code>Ctrl+Shift+P</code> command (<code>Cmd+Shift+P</code> on macOS) to access the Command Palette</li>
   <li>Select <strong>Tasks: Run Task</strong></li>
   <li>Select the <strong>Setup Everything (First Time)</strong> option</li>
-  <img src="docs/FirstTimeSetup.png" alt="VSCode Task Menu showing Setup Everything (First Time)" width="600" />
+  <img src="https://raw.githubusercontent.com/The-Mighty-Pythons/titanhelp-mighty-pythons/main/titanhelp-mighty-pythons/docs/FirstTimeSetup.png" alt="VSCode Task Menu showing Setup Everything (First Time)" width="600" />
   <li>Go to <strong>Run and Debug</strong> (if you cannot find it, check under View → Run)</li>
   <li>Select: <code>Full Stack: Backend + Frontend</code></li>
   <li>Click the green play button</li>
