@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from ..schemas.ticket_validation import validate_create_ticket
+from ..schemas.ticket_validation import validate_create_ticket, validate_update_status
 from ..services.ticket_service import TicketService
 
 tickets_bp = Blueprint("tickets", __name__)
@@ -26,3 +26,19 @@ def create_ticket():
     )
     
     return jsonify(created), 201
+
+
+# PATCH is the HTTP protocol verb for partial updates, a required keyword
+@tickets_bp.patch("/tickets/<int:ticket_id>/status")
+def update_ticket_status(ticket_id):
+    payload = request.get_json(silent=True) or {}
+
+    errors = validate_update_status(payload)
+    if errors:
+        return jsonify({"errors": errors}), 400
+
+    updated = service.update_ticket_status(ticket_id, payload["status"])
+    if updated is None:
+        return jsonify({"error": "Ticket not found."}), 404
+
+    return jsonify(updated), 200
