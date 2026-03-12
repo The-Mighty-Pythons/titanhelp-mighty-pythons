@@ -6,6 +6,12 @@
       "type": "python",
       "request": "launch",
       "python": "${workspaceFolder}/backend/TitanHelp.Backend/.venv/Scripts/python.exe",
+      "osx": {
+        "python": "${workspaceFolder}/backend/TitanHelp.Backend/.venv/bin/python"
+      },
+      "linux": {
+        "python": "${workspaceFolder}/backend/TitanHelp.Backend/.venv/bin/python"
+      },
       "program": "${workspaceFolder}/backend/TitanHelp.Backend/TitanHelp.Backend.py",
       "cwd": "${workspaceFolder}/backend/TitanHelp.Backend",
       "console": "integratedTerminal",
